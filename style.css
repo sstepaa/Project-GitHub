@@ -8,6 +8,7 @@
     --fuente-titulo: 'Open Sans';
 }
 
-header{
-    font-family: var(--fuente-titulo);
+.conteng{
+    width: 100%;
+    max-width: 1440px;
 }
