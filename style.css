@@ -18,9 +18,57 @@
     background: #0F2027;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: relative;
 }
+
+.content__cabecera{
+    text-align: center;
+    color: #fff; 
+}
+
+.cabecera__title{
+    padding: 50px;
+}
+
+.cabecera_menu{
+    top: 45px;
+    left: 291px;
+    position: absolute;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 50rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+.menu__hiper{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    color: #fff;
+}
+
+.menu__hiper:hover{
+    text-decoration: underline;
+
+}
+
+
 
 
 header{
     font-family: var(--fuente-titulo);
 }
+
