@@ -39,17 +39,29 @@
             <section>
                 <h2>Comandos mas utilizados:</h2>
 
-                <p>git init: Inciar un repo, debes ejecutarlo en la carpeta donde esten los archivos.</p>
-                <p>git checkout -b [branch]: Utilizamos este comando para crear una nueva rama y posicionarnos en ella.</p>
-                <p>git push -u origin [branch]: Con este comando, confirmamos que nuestra rama fue configurada para trackear una rama remota </p>
-                <p>git add [archivo]: agregar archivo a la etapa de stagging (memoria). Este archivo quedara en espera de ser agregado al repositorio remoto o ser eliminado.</p>
-                <p>git rm --cached [archivo]: Lo utilizamos para borrar los archivos agregados (con el comando 'add') la etapa de stagging</p>
-                <p>git status: Muestra los commits con sus respectivos mensajes y los cambios que se hicieron en el repo </p>
-                <p>git commit -m 'mensaje': Guarda en el repositorio todos los cambios que hicismos; debemos escribir un mensaje que describa respectivos cambios.</p>
-                <p>git status: Nos permite ver el estado y los cambios del archivo en el repositorio.</p>
-                <p>git diff: Muestra los cambios entre los distintos commits.</p>
-                <p>git pull: Con este comando traemos los ultimos cambios del repositorio remoto.</p>
-                <p>git push: Enviamos los cambios de nuestro último commit al repositorio remoto.</p>
+                
+                <p><span>git init:</span> Inciar un repo, debes ejecutarlo en la carpeta donde esten los archivos.</p>
+                <p><span>git checkout -b [branch]:</span> Utilizamos este comando para crear una nueva rama y posicionarnos en ella.</p>
+                <p><span>git push -u origin [branch]:</span> Con este comando, confirmamos que nuestra rama fue configurada para trackear una rama remota </p>
+                <p><span>git add [archivo]:</span> agregar archivo a la etapa de stagging (memoria). Este archivo quedara en espera de ser agregado al repositorio remoto o ser eliminado.</p>
+                <p><span>git rm --cached [archivo]:</span> Lo utilizamos para borrar los archivos agregados (con el comando 'add') la etapa de stagging</p>
+                <p><span>git status: </span>Muestra los commits con sus respectivos mensajes y los cambios que se hicieron en el repo </p>
+                <p><span>git commit -m 'mensaje':</span> Guarda en el repositorio todos los cambios que hicismos; debemos escribir un mensaje que describa respectivos cambios.</p>
+                <p><span>git status:</span> Nos permite ver el estado y los cambios del archivo en el repositorio.</p>
+                <p><span>git diff:</span> Muestra los cambios entre los distintos commits.</p>
+                <p><span>git pull:</span> Con este comando traemos los ultimos cambios del repositorio remoto.</p>
+                <p><span>git push:</span> Enviamos los cambios de nuestro último commit al repositorio remoto.</p>
+            </section>
+
+            <section>
+                <h2>Alias & Tags:</h2>
+
+                <p><span>git log --all --graph --decorate --oneline</span> Este comando nos muestra todas las ramas de commits que fuimos realizando.</p>
+                <p><span>git tag -a v0.1 -m 'version 0.1' [hash commit]<span> Creamos un tag basado en determinado commit.</p>
+                <p><span>git tag</span> Vemos los tags creados</p>
+                <p><span>git push origin --tags</span>Enviar los tags creados al repo remoto.</p>
+                <p><span>git tag -d [tag]</span> Borramos el tag en el repositorio local.</p>
+                <p><span>git push origin :refs/tags/[tag]</span>Borramos el tag en el repositorio remoto.</p>
             </section>
 
             
