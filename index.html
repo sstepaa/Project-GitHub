@@ -43,24 +43,38 @@
         <!---------------------Secciones y articulos de informacion--------------->
         <main>
             <section>
-                <h2>Comandos mas utilizados:</h2>
-
                 
-                <p><span>git init:</span> Inciar un repo, debes ejecutarlo en la carpeta donde esten los archivos.</p>
+                <h2>¿Qué es Git & GitHub?</h2>
+                
+                <p><span>Git:</span>Es un sistema de control de versiones, es decir, un sistema que registra los cambios en archivos. Esto nos permite recuperar versiones anteriores si incurrimos en errores en el códgio o si realizamos cambios que luego no queremos implementar en el proyecto.</p>
+
+                <p><span>GitHub:</span>Escencialmente es un repositorio remoto para compartir y guardar proyectos utilizando el sitema de control de versiones Git.</p>
+
+
+                <h2>Comandos mas utilizados</h2>
+
+                <p><span>git init:</span> Inciar un repositorio, debes ejecutarlo en la carpeta donde esten los archivos que pertenezcan al repo.</p>
                 <p><span>git checkout -b [branch]:</span> Utilizamos este comando para crear una nueva rama y posicionarnos en ella.</p>
                 <p><span>git push -u origin [branch]:</span> Con este comando, confirmamos que nuestra rama fue configurada para trackear una rama remota </p>
                 <p><span>git add [archivo]:</span> agregar archivo a la etapa de stagging (memoria). Este archivo quedara en espera de ser agregado al repositorio remoto o ser eliminado.</p>
                 <p><span>git rm --cached [archivo]:</span> Lo utilizamos para borrar los archivos agregados (con el comando 'add') la etapa de stagging</p>
-                <p><span>git status: </span>Muestra los commits con sus respectivos mensajes y los cambios que se hicieron en el repo </p>
+                <p><span>git status: </span>Muestra los commits con sus respectivos mensajes y los cambios que se hicieron en el repositorio.</p>
                 <p><span>git commit -m 'mensaje':</span> Guarda en el repositorio todos los cambios que hicismos; debemos escribir un mensaje que describa respectivos cambios.</p>
-                <p><span>git status:</span> Nos permite ver el estado y los cambios del archivo en el repositorio.</p>
                 <p><span>git diff:</span> Muestra los cambios entre los distintos commits.</p>
+                <p><span>git log:</span>Muestra los ID's de los commits.</p>
                 <p><span>git pull:</span> Con este comando traemos los ultimos cambios del repositorio remoto.</p>
                 <p><span>git push:</span> Enviamos los cambios de nuestro último commit al repositorio remoto.</p>
-            </section>
+                <p><span>git reset:</span>Permite volver a versiones anteriores borrando los cambios que hicimos luego de determinado commit. Reset --hard, reestablece el commit a 'staging' y también el directorio de trabajo. Reset --soft, reinicia el HEAD para el commit, NO reinicia el arbol de trabajo.</p>
 
-            <section>
-                <h2>Alias & Tags:</h2>
+
+                <h2>Merge y fusión de ramas</h2>
+
+                <p><span>¿Qué es un Merge?</span>Un merge es una fusión de una rama en la que se realizaron distintas modificaciones de los archivos, con otra rama a la que queremos agregarle esos nuevos cambios.</p>
+                <p><span>git merge [rama ubicado] [rama que mergeamos]:</span>Agregamos a la rama en la que estamos parados, los cambios que se hicieron en otra rama.</p>
+                <p><span>git branch:</span>Nos muestra las ramas creadas hasta el moento.</p>
+
+
+                <h2>Alias & Tags</h2>
 
                 <p><span>git log --all --graph --decorate --oneline</span> Este comando nos muestra todas las ramas de commits que fuimos realizando.</p>
                 <p><span>git tag -a v0.1 -m 'version 0.1' [hash commit]<span> Creamos un tag basado en determinado commit.</p>
@@ -68,6 +82,28 @@
                 <p><span>git push origin --tags</span>Enviar los tags creados al repo remoto.</p>
                 <p><span>git tag -d [tag]</span> Borramos el tag en el repositorio local.</p>
                 <p><span>git push origin :refs/tags/[tag]</span>Borramos el tag en el repositorio remoto.</p>
+
+
+                <h2>Crear y configurar una SSH Key</h2>
+
+                <p><span>¿Por qué crear y configurar una SSH Key?</span>Por cuestiones de seguridad, es importante configurar una SSH para utilizar Git y GitHub, y así evitar passwords craking y proteger todos los archivos que estén alojados GitHub, tanto proyectos personales propios o proyectos profesionales para terceros.</p>
+                <p><span>¿Cómo funciona una SSH Key?</span>En nuestro repo local crea una llave pública y una privada (esto se crea para cada repositorio), la llave pública es enviada a GitHub y luego GitHub, envía su propia llave pública (cifrada con tú llave pública) a nuestro repo local, es así que se configura una conexión de doble camino SSH, mucho más segura que la HTTPS,gracias a esto ya no debemos utilizar contraseña.</p>
+                
+                <p><span>git config --global user.email [mail]:</span>Nos permite configurar nuestro nombre de email, este debe matchear con el de nuestra cuenta de GitHub.</p>
+                <p><span>git config --global user.name:</span>Configuraremos nuestro nombre de usuario, es el nombre que se muestra en autores cuando vemos los registros de commits.</p>
+                <p><span>ssh-keygen -t rsa -b 4096 -C '[email]:'</span>Con este comando creamos la llave SSH, definimos el algoritmo para crear la llave, que tan compleja será la llave y el correo al que estará conectada la llave.</p>
+                <p><span>eval $(ssh-agent - s):</span>Comprobamos el proceso de la creación de llave.</p>
+                <p><span>ssh-add [locación del la llave privada]:</span>Agregamos la llave que creamos al agente de autenticación.</p>
+
+                <p><span>Configurar una SSH Key con GitHub:</span>Copiamos nuestra llave pública, vamos a GitHub > Settings >  SSH and GPG keys; ponemos un título y creamos la llave.</p>
+                <p><span>git remote set-url [SSH]</span>Ahora configuramos la conexion SSH del repositorio remoto al que queremos conectarnos.</p>
+                <p><span>git remote -v:</span>Vemos las direcciones de origin.</p>   
+                 
+
+                
+                
+
+
             </section>
 
             
